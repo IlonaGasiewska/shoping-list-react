@@ -7,16 +7,24 @@ function App() {
 
   const [shoppingList, setShoppingList] = useState([]);
 
-  const addProduct = (productsName) => {
-    setShoppingList(prev => [...prev, productsName])
+  const addProduct = (productName) => {
+    let key;
+    shoppingList.length === 0 ? key = 0 : key = shoppingList[shoppingList.length -1].key + 1;
+    const product = { name: productName, key };
+    setShoppingList(prev => [...prev, product]);
+    console.log(shoppingList)
+  }
+
+  const deleteProduct = (productKey) => {
+    setShoppingList(prev => prev.filter((product) => product.key !== productKey));
   }
 
   return (
     <div className="App">
-      <ShopingList shoppingList={shoppingList}/>
+      <ShopingList shoppingList={shoppingList} deleteProduct={deleteProduct}/>
       <ProductsList addProduct={addProduct}/>
     </div>
   );
 }
 
-export default App;
+export default App
