@@ -7,7 +7,7 @@ function ProductsList({ addProduct }) {
             <h2>Produkty:</h2>
             <ul>
                 {products.map(product => 
-                    <li key={product.name} onClick={() => addProduct(product.name)}>
+                    <li key={product.name} onClick={() => addProduct(product)}>
                         {product.name}
                     </li>
                 )}
