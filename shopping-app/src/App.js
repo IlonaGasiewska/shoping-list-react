@@ -10,9 +10,8 @@ function App() {
   const addProduct = (productPassed) => {
     let key;
     shoppingList.length === 0 ? key = 0 : key = shoppingList[shoppingList.length -1].key + 1;
-    const product = { name: productPassed.name, key, category: productPassed.category };
+    const product = { name: productPassed.name, key, category: productPassed.category, food: productPassed.food};
     setShoppingList(prev => [...prev, product]);
-    console.log(shoppingList)
   }
 
   const deleteProduct = (productKey) => {
