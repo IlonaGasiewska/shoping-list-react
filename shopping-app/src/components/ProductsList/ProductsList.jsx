@@ -24,7 +24,7 @@ function ProductsList({ addProduct }) {
   };
 
   const handleSearch = () => {
-    let filtered = newProductsAray;
+    let filtered = newProductsArray;
 
     if (selectedCategory !== "all") {
       filtered = filtered.filter((product) => product.category === selectedCategory);
@@ -48,7 +48,7 @@ function ProductsList({ addProduct }) {
 }, [selectedCategory, showFoodOptionIsChecked, searchText, handleSearch]);
 
 
-  const [newProductsAray, setNewProductArray] = useState([...products]);
+  const [newProductsArray, setNewProductArray] = useState([...products]);
   const [newProductCategory, setNewProductCategory] = useState("");
   const [newProductIsFood, setNewProductIsFood] = useState(false);
   const [newProductName, setNewProductName] = useState("");
@@ -66,15 +66,23 @@ function ProductsList({ addProduct }) {
   };
 
   const handleSetNewArray = () => {
-    setNewProductArray((prev) => [
-      ...prev,
-      {
-        name: newProductName,
-        category: newProductCategory,
-        foodProduct: newProductIsFood,
-      },
-    ]);
-    console.log(newProductsAray);
+    if(newProductName !==false && newProductCategory !==false){
+
+      for (const project of newProductsArray) {
+        if(project.name.includes(newProductName)){
+          return false
+        }
+      }
+
+      setNewProductArray((prev) => [
+        ...prev,
+        {
+          name: newProductName,
+          category: newProductCategory,
+          foodProduct: newProductIsFood,
+        },
+      ]);
+    }
   };
 
   return (
@@ -88,7 +96,7 @@ function ProductsList({ addProduct }) {
         onShowFoodOptionChange={() => setShowFoodOptionIsChecked(!showFoodOptionIsChecked)}
         onSearchTextChange={(event) => setSearchText(event.target.value)}
         onSearch={handleSearch}
-        newProductsAray={newProductsAray}
+        newProductsArray={newProductsArray}
       />
       <ul>
         {filteredProducts.map((product) => (

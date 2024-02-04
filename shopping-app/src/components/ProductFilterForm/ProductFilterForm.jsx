@@ -6,9 +6,9 @@ function ProductFilterForm({
   onShowFoodOptionChange,
   onSearchTextChange,
   onSearch,
-  newProductsAray,
+  newProductsArray,
 }) {
-  const categories = newProductsAray.reduce((categoriesArray, product) => {
+  const categories = newProductsArray.reduce((categoriesArray, product) => {
     !categoriesArray.includes(product.category) && categoriesArray.push(product.category);
     return categoriesArray;
   }, []);
