@@ -7,7 +7,7 @@ function ShopingList ({ shoppingList, deleteProduct }) {
             <div className="spring"></div>
             <div className="spring"></div>
             <div className="spring"></div>
-            <div className="springf"></div>
+            <div className="spring"></div>
         </div>
         <h1>Produkty do kupienia:</h1>
         {shoppingList.length === 0 && <p className="emptyListMessage">Wybierz produkt z listy lub dodaj własny</p>}
