@@ -11,18 +11,18 @@ function ProductAddForm({
 }) {
   return (
     <form action="">
-      <label htmlFor="productName">Nazwa nowego porduktu:</label>
+      <label htmlFor="newProductName">Nazwa nowego porduktu:</label>
       <input
         onInput={(e) => handleSetName(e)}
-        name="productName"
-        id="productName"
+        name="newProductName"
+        id="newProductName"
         value={newProductName}
         type="text"
       />
-      <label htmlFor="productCategory">Kategoria nowego porduktu:</label>
+      <label htmlFor="newProductCategory">Kategoria nowego porduktu:</label>
       <input
-        name="productCategory"
-        id="productCategory"
+        name="newProductCategory"
+        id="newProductCategory"
         onInput={(e) => handleSetNewProductCategory(e)}
         type="text"
         value={newProductCategory}

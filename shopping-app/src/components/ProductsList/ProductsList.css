@@ -15,6 +15,17 @@
 
 .ProductsList [type=checkbox] {
     width: min-content;
+    margin: auto;
+    margin-left: 5px;
+}
+
+select {
+    width: 93%;
+    margin-right: 100px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #B4B4B8;
+    margin: 5px 0px;
 }
 
 .ProductsList [type=button] {
