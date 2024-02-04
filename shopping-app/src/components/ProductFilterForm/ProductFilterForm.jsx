@@ -15,26 +15,25 @@ function ProductFilterForm({
 
   return (
     <form>
-      <input type="text" value={searchText} onChange={onSearchTextChange} />
-      <label htmlFor="category">Category: </label>
+      <label htmlFor="productName">Nazwa produktu: </label>
+      <input id="productName" name="productName" type="text" value={searchText} onChange={onSearchTextChange} />
+      <label htmlFor="category">Kategoria: </label>
       <select id="category" onChange={onCategoryChange} value={selectedCategory}>
         <option value="all">wszystko</option>
         {categories.map((category) => (
           <option key={category} value={category}>
-            {" "}
-            {category}{" "}
+            {category}
           </option>
         ))}
       </select>
-      <label htmlFor="food">
-        Artykuły spożywcze
-        <input
-          type="checkbox"
-          id="food"
-          checked={showFoodOptionIsChecked}
-          onChange={onShowFoodOptionChange}
-        />
-      </label>
+      <label htmlFor="food">Artykuły spożywcze </label>
+      <input
+        type="checkbox"
+        id="food"
+        name="food"
+        checked={showFoodOptionIsChecked}
+        onChange={onShowFoodOptionChange}
+      />
     </form>
   );
 }

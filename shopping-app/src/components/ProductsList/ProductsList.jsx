@@ -45,7 +45,8 @@ function ProductsList({ addProduct }) {
 
   useEffect(() => {
     handleSearch();
-  }, [selectedCategory, showFoodOptionIsChecked, searchText]);
+}, [selectedCategory, showFoodOptionIsChecked, searchText, handleSearch]);
+
 
   const [newProductsAray, setNewProductArray] = useState([...products]);
   const [newProductCategory, setNewProductCategory] = useState("");
@@ -77,7 +78,7 @@ function ProductsList({ addProduct }) {
   };
 
   return (
-    <>
+    <div className="ProductsList">
       <h2>Proponowane produkty:</h2>
       <ProductFilterForm
         selectedCategory={selectedCategory}
@@ -105,7 +106,7 @@ function ProductsList({ addProduct }) {
         handleSetNewProductIsFood={() => handleSetNewProductIsFood()}
         handleSetNewArray={handleSetNewArray}
       />
-    </>
+    </div>
   );
 }
 

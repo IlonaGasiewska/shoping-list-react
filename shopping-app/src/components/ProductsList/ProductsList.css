@@ -1,1 +1,39 @@
+.ProductsList {
+    width: 30%;
+    max-width: 450px;
+    min-width: 350px;
+}
 
+.ProductsList input {
+    width: 90%;
+    margin: auto;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #B4B4B8;
+    margin: 5px 0px;
+}
+
+.ProductsList [type=checkbox] {
+    width: min-content;
+}
+
+.ProductsList [type=button] {
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #B4B4B8;
+    padding: 10px;
+    font-weight: 800;
+}
+
+.ProductsList ul {
+    list-style: none;
+   
+    padding: 0px;
+    font-size: 20px;
+}
+
+.ProductsList li {
+    cursor: pointer;
+    width: min-content;
+}
