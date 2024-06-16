@@ -1,0 +1,30 @@
+.signUpForm {
+    width: 400px;
+    margin: auto;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.signUpForm input {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+button {
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #B4B4B8;
+    padding: 10px;
+    font-weight: 600;
+    width: 92%;
+    border-radius: 5px;
+}
+
+.errorMessage {
+    color: red;
+    margin: 0px;
+}

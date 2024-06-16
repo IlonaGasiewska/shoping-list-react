@@ -1,0 +1,50 @@
+.ProductsList {
+    width: 30%;
+    max-width: 450px;
+    min-width: 350px;
+}
+
+.ProductsList input {
+    width: 90%;
+    margin: auto;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #B4B4B8;
+    margin: 5px 0px;
+}
+
+.ProductsList [type=checkbox] {
+    width: min-content;
+    margin: auto;
+    margin-left: 5px;
+}
+
+select {
+    width: 93%;
+    margin-right: 100px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #B4B4B8;
+    margin: 5px 0px;
+}
+
+.btn {
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #B4B4B8;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.ProductsList ul {
+    list-style: none;
+
+    padding: 0px;
+    font-size: 20px;
+}
+
+.ProductsList li {
+    cursor: pointer;
+    width: min-content;
+}
