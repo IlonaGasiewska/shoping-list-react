@@ -1,8 +1,9 @@
-import "./ShoppingList.css";
 import React, { useContext, useEffect } from "react";
 import { ShoppingListContext } from "../../providers/ShoppingListProvider";
 import { getShoppingist } from "../../api/gestShoppingList";
 import { deleteItemFromShoppingist } from '../../api/deleteItemFromShoppingList'
+
+import "./ShoppingList.css";
 
 function ShoppingList() {
   const { shoppingList, setShoppingList, crossedOutItems, setCrossedOutItems } = useContext(ShoppingListContext);
@@ -15,7 +16,7 @@ function ShoppingList() {
   }, [setShoppingList]);
 
   const handleRightClick = (event, product) => {
-    event.preventDefault(); // Zapobiega wyświetleniu domyślnego menu kontekstowego
+    event.preventDefault();
     setCrossedOutItems(prevCrossedOutItems => {
       const newCrossedOutItems = new Set(prevCrossedOutItems);
       if (newCrossedOutItems.has(product.id)) {
